@@ -1,0 +1,2 @@
+/usr/bin/ar qc librealsenseclass.a CMakeFiles/realsenseclass.dir/realsense.cpp.o
+/usr/bin/ranlib librealsenseclass.a

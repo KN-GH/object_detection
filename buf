@@ -11,8 +11,8 @@ int main() try {
     const int height = 720;
 
     // 青色検出のHSV範囲 (H: 80-110, S: 100-255, V: 200-255)
-    cv::Scalar lower_red(50, 100, 200);
-    cv::Scalar upper_red(150, 255, 255);
+    cv::Scalar lower_red(80, 100, 200);
+    cv::Scalar upper_red(110, 255, 255);
 
     RealsenseOperatorClass realsense(width, height);
     realsense.start_camera();
@@ -21,8 +21,8 @@ int main() try {
         cv::Mat bgr_image;
         realsense.get_image(bgr_image);
         cv::Mat hsv_image;
-        
         cv::cvtColor(bgr_image, hsv_image, cv::COLOR_BGR2HSV);
+        
         cv::Mat binary_image;
         cv::inRange(hsv_image, lower_red, upper_red, binary_image);
 
