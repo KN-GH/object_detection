@@ -468,8 +468,7 @@ CMakeFiles/a.out.dir/main.cpp.o: ../main.cpp \
   /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
   /usr/local/include/opencv4/opencv2/video.hpp \
   /usr/local/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
-  ../realsense.hpp
+  /usr/local/include/opencv4/opencv2/video/background_segm.hpp
 
 
 /usr/local/include/opencv4/opencv2/video/tracking.hpp:
@@ -1093,8 +1092,6 @@ CMakeFiles/a.out.dir/main.cpp.o: ../main.cpp \
 /usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-../realsense.hpp:
 
 /usr/include/c++/11/math.h:
 

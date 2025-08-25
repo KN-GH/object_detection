@@ -92,9 +92,6 @@ a_out_EXTERNAL_OBJECTS =
 
 a.out: CMakeFiles/a.out.dir/main.cpp.o
 a.out: CMakeFiles/a.out.dir/build.make
-a.out: librealsenseclass.a
-a.out: /usr/local/lib/librealsense2.so.2.55.1
-a.out: /usr/local/lib/librsutils.a
 a.out: /usr/local/lib/libopencv_gapi.so.4.12.0
 a.out: /usr/local/lib/libopencv_highgui.so.4.12.0
 a.out: /usr/local/lib/libopencv_ml.so.4.12.0
@@ -102,12 +99,12 @@ a.out: /usr/local/lib/libopencv_objdetect.so.4.12.0
 a.out: /usr/local/lib/libopencv_photo.so.4.12.0
 a.out: /usr/local/lib/libopencv_stitching.so.4.12.0
 a.out: /usr/local/lib/libopencv_video.so.4.12.0
-a.out: /usr/local/lib/libopencv_calib3d.so.4.12.0
-a.out: /usr/local/lib/libopencv_dnn.so.4.12.0
-a.out: /usr/local/lib/libopencv_features2d.so.4.12.0
-a.out: /usr/local/lib/libopencv_flann.so.4.12.0
 a.out: /usr/local/lib/libopencv_videoio.so.4.12.0
 a.out: /usr/local/lib/libopencv_imgcodecs.so.4.12.0
+a.out: /usr/local/lib/libopencv_dnn.so.4.12.0
+a.out: /usr/local/lib/libopencv_calib3d.so.4.12.0
+a.out: /usr/local/lib/libopencv_features2d.so.4.12.0
+a.out: /usr/local/lib/libopencv_flann.so.4.12.0
 a.out: /usr/local/lib/libopencv_imgproc.so.4.12.0
 a.out: /usr/local/lib/libopencv_core.so.4.12.0
 a.out: CMakeFiles/a.out.dir/link.txt

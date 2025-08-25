@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named realsenseclass
-
-# Build rule for target.
-realsenseclass: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 realsenseclass
-.PHONY : realsenseclass
-
-# fast build rule for target.
-realsenseclass/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/realsenseclass.dir/build.make CMakeFiles/realsenseclass.dir/build
-.PHONY : realsenseclass/fast
-
-#=============================================================================
 # Target rules for targets named a.out
 
 # Build rule for target.
@@ -166,30 +153,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-realsense.o: realsense.cpp.o
-.PHONY : realsense.o
-
-# target to build an object file
-realsense.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/realsenseclass.dir/build.make CMakeFiles/realsenseclass.dir/realsense.cpp.o
-.PHONY : realsense.cpp.o
-
-realsense.i: realsense.cpp.i
-.PHONY : realsense.i
-
-# target to preprocess a source file
-realsense.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/realsenseclass.dir/build.make CMakeFiles/realsenseclass.dir/realsense.cpp.i
-.PHONY : realsense.cpp.i
-
-realsense.s: realsense.cpp.s
-.PHONY : realsense.s
-
-# target to generate assembly for a file
-realsense.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/realsenseclass.dir/build.make CMakeFiles/realsenseclass.dir/realsense.cpp.s
-.PHONY : realsense.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -199,13 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... a.out"
-	@echo "... realsenseclass"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... realsense.o"
-	@echo "... realsense.i"
-	@echo "... realsense.s"
 .PHONY : help
 
 
