@@ -35,14 +35,19 @@ int main() try {
         cv::Mat depth_gray_image_8bit;
         depth_gray_image_16bit.convertTo(depth_gray_image_8bit, CV_8U, alpha);
         
-        // モルフォロジー変換 オープニング
+        // モルフォロジー変換
         cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
         cv::Mat depth_opened;
-        morphologyEx(depth_gray_image_8bit, depth_opened, cv::MORPH_OPEN, kernel);
+        cv::morphologyEx(depth_gray_image_8bit, depth_opened, cv::MORPH_OPEN, kernel);
         cv::Mat depth_closed;
-        morphologyEx(depth_opened, depth_closed, cv::MORPH_CLOSE, kernel);
-        
-        cv::imshow("Depth image", depth_closed);
+        cv::morphologyEx(depth_opened, depth_closed, cv::MORPH_CLOSE, kernel);
+
+        // ガウシアンフィルター
+        cv::Mat depth_gausian;
+        cv::Size ksize(101, 101);
+        cv::GaussianBlur(depth_closed, depth_gausian, ksize, 1);
+
+        cv::imshow("Depth image", depth_gausian);
         if (cv::waitKey(1) == 'q') break;
     }
 
